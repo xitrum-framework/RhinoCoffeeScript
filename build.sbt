@@ -1,6 +1,6 @@
 organization := "tv.cntt"
 
-name := "RhinoCoffeeScript"
+name := "rhinocoffeescript"
 
 version := "1.6.2-SNAPSHOT"
 
