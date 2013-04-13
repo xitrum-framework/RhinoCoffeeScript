@@ -6,7 +6,9 @@ How to create CoffeeScript.class
 
 ::
 
-  org.mozilla.javascript.tools.jsc.Main.main("-opt 9 -nosource -o CoffeeScript -package tv.cntt.rhino coffee-script.js".split(" "))
+  org.mozilla.javascript.tools.jsc.Main.main(
+    "-opt 9 -nosource -o CoffeeScript -package tv.cntt.rhino coffee-script.js".split(" ")
+  )
 
 Tell me to update if a new version of Rhino has been released or the above
 options can be improved.
