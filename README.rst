@@ -24,34 +24,27 @@ Maven:
 
 Tell me to update if a new version of CoffeeScript has been released.
 
-This library contains only one file CoffeeScript.class, without no dependency.
+This library only includes Rhino dependency. You can use the precompiled class
+``tv.cntt.rhinocoffeescript.CoffeeScript`` or the utility class
+``tv.cntt.rhinocoffeescript.Compiler``.
+
 Scala example:
 
 ::
 
-  import scala.util.control.NonFatal
-  import org.mozilla.javascript._  // Your project must include Rhino dependency
-  import tv.cntt.rhino.CoffeeScript
+  import javax.script.ScriptException
+  import tv.cntt.rhinocoffeescript.Compiler
 
-  def compile(coffeeScript: String, bare: Boolean): Option[String] = {
-    val ctx = Context.enter()
-    try {
-      val scope  = ctx.initStandardObjects()
-      val script = new CoffeeScript
-      script.exec(ctx, scope)
-
-      val obj  = scope.get("CoffeeScript", scope).asInstanceOf[NativeObject]
-      val fun  = obj.get("compile", scope).asInstanceOf[Function]
-      val opts = ctx.evaluateString(scope, "({bare: %b})".format(bare), null, 1, null)
-
-      val javaScript = fun.call(ctx, scope, obj, Array(coffeeScript, opts)).asInstanceOf[String]
-      Some(javaScript)
-    } catch {
-      case NonFatal(e) =>
-        println(e)
-        None
-    } finally {
-      Context.exit()
+  object CoffeeScriptCompiler {
+    def compile(coffeeScript: String): Option[String] = {
+      try {
+        val javaScript = Compiler.compile(coffeeScript)
+        Some(javaScript)
+      } catch {
+        case e: ScriptException =>
+          println("CoffeeScript syntax error at %d:%d".format(e.getLineNumber, e.getColumnNumber))
+          None
+      }
     }
   }
 
