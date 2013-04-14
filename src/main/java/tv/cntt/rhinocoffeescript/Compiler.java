@@ -1,4 +1,4 @@
-package tv.cntt.rhino;
+package tv.cntt.rhinocoffeescript;
 
 import javax.script.ScriptException;
 
@@ -16,7 +16,7 @@ class Compiler {
         Context ctx = Context.enter();
         try {
             Scriptable scope  = ctx.initStandardObjects();
-            Script     script = new CoffeeScript();
+            Script     script = (Script) new CoffeeScript();
             script.exec(ctx, scope);
 
             NativeObject obj  = (NativeObject) scope.get("CoffeeScript", scope);
