@@ -48,11 +48,17 @@ Scala example:
         Some(javaScript)
       } catch {
         case e: ScriptException =>
-          println("CoffeeScript syntax error at %d:%d".format(e.getLineNumber, e.getColumnNumber))
+          val line   = e.getLineNumber
+          val column = e.getColumnNumber
+          println("CoffeeScript syntax error at %d:%d".format(line, column))
           None
       }
     }
   }
+
+You also cache the generated JavaScript snippet using local cache
+(you can easily `implement one with LinkedHashMap <http://www.java-blog.com/creating-simple-cache-java-linkedhashmap-anonymous-class>`_)
+or distributed cache (like `Hazelcast <http://www.hazelcast.com/>`_).
 
 About the options when creating CoffeeScript.class
 --------------------------------------------------
