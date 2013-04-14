@@ -1,5 +1,11 @@
-How to create CoffeeScript.class
---------------------------------
+This Java library provides CoffeeScript.class precompiled with Rhino.
+This allows you to speed up the compiling of CoffeeScript snippets to JavaScript.
+For example, it takes several seconds to load coffee-script.js and use it to
+compile a simple CoffeeScript snippet. It is reduced to several milliseconds
+when using the precompiled CoffeeScript.class.
+
+How CoffeeScript.class is created
+---------------------------------
 
 1. Download coffee-script.js (the core compile) from http://coffeescript.org/
 2. Precompile with Rhino 1.7R4:
