@@ -12,5 +12,6 @@ autoScalaLibrary := false
 // Remove Scala version in output paths and artifacts
 crossPaths := false
 
-// Skip API doc generation
+// Skip API doc generation to speedup "publish-local" while developing.
+// Comment out this line when publishing to Sonatype.
 publishArtifact in (Compile, packageDoc) := false
