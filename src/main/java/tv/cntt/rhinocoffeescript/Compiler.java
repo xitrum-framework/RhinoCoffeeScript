@@ -11,7 +11,7 @@ import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 
 // See https://github.com/scalate/scalate/blob/scala_2.10/scalate-core/src/main/scala/org/fusesource/scalate/filter/CoffeeScriptFilter.scala
-class Compiler {
+public class Compiler {
     public static String compile(String coffeeScript) throws ScriptException {
         Context ctx = Context.enter();
         try {
