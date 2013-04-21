@@ -4,6 +4,11 @@ name := "rhinocoffeescript"
 
 version := "1.6.2-SNAPSHOT"
 
+javacOptions ++= Seq(
+  "-source",
+  "1.5"
+)
+
 libraryDependencies += "org.mozilla" % "rhino" % "1.7R4"
 
 // Remove Scala dependency
