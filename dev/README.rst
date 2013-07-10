@@ -1,6 +1,14 @@
 Generate CoffeeScript.class
 ---------------------------
 
+Step 1
+~~~~~~
+
+Download coffee-script.js (the core compile) from http://coffeescript.org/.
+
+Step 2
+~~~~~~
+
 Comment out the line ``autoScalaLibrary := false`` in build.sbt.
 
 Run in ``sbt console``:
@@ -10,6 +18,13 @@ Run in ``sbt console``:
   org.mozilla.javascript.tools.jsc.Main.main(
     "-opt 9 -nosource -o CoffeeScript -package tv.cntt.rhinocoffeescript coffee-script.js".split(" ")
   )
+
+coffee-script.js will be compiled to tv/cntt/rhinocoffeescript/CoffeeScript.class.
+
+Step 3
+~~~~~~
+
+Uncomment out the line ``autoScalaLibrary := false`` in build.sbt.
 
 ``sbt compile`` then replace CoffeeScript.class:
 

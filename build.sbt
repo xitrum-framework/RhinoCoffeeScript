@@ -2,7 +2,7 @@ organization := "tv.cntt"
 
 name := "rhinocoffeescript"
 
-version := "1.6.2-SNAPSHOT"
+version := "1.6.3"
 
 javacOptions ++= Seq(
   "-source",

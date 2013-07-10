@@ -26,7 +26,7 @@ Maven:
 
 * Group: tv.cntt
 * Artifact: rhinocoffeescript
-* Version: 1.6.2 (= latest version of CoffeeScript)
+* Version: 1.6.3 (= latest version of CoffeeScript)
 
 Tell me to update if a new version of CoffeeScript has been released.
 
