@@ -24,15 +24,10 @@ coffee-script.js will be compiled to tv/cntt/rhinocoffeescript/CoffeeScript.clas
 Step 3
 ~~~~~~
 
-Uncomment out the line ``autoScalaLibrary := false`` in build.sbt.
+Restore the line ``autoScalaLibrary := false`` modified above.
 
-``sbt compile`` then replace CoffeeScript.class:
-
-::
-
-  cp tv/cntt/rhinocoffeescript/CoffeeScript.class target/classes/tv/cntt/rhinocoffeescript/
-
-Now we can ``sbt package``, ``sbt publish-local`` etc.
+See build.sbt, now every time ``sbt compile`` is run, CoffeeScript.class will
+be replaced automatically.
 
 Publish to Sonatype
 -------------------

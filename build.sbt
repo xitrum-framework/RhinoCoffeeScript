@@ -16,6 +16,15 @@ javacOptions in doc := Seq("-source", "1.5")
 
 libraryDependencies += "org.mozilla" % "rhino" % "1.7R4"
 
+// Replace CoffeeScript.class after compilation
+compile in Compile <<= (compile in Compile) map { any =>
+  IO.copyFile(
+    file("tv/cntt/rhinocoffeescript/CoffeeScript.class"),
+    file("target/classes/tv/cntt/rhinocoffeescript/CoffeeScript.class")
+  )
+  any
+}
+
 //------------------------------------------------------------------------------
 
 // Skip API doc generation to speedup "publish-local" while developing.
