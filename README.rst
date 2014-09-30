@@ -1,4 +1,5 @@
-This Java library provides CoffeeScript.class precompiled with Rhino.
+This Java library provides CoffeeScript.class precompiled with
+`Rhino <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino>`_.
 This allows you to speed up the compiling of CoffeeScript snippets to JavaScript.
 For example, it takes several seconds to load coffee-script.js and use it to
 compile a simple CoffeeScript snippet. It is reduced to several milliseconds
