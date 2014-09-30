@@ -2,7 +2,7 @@ organization := "tv.cntt"
 
 name := "rhinocoffeescript"
 
-version := "1.7.1"
+version := "1.8.0"
 
 // Remove Scala dependency
 autoScalaLibrary := false
@@ -18,10 +18,12 @@ libraryDependencies += "org.mozilla" % "rhino" % "1.7R4"
 
 // Replace CoffeeScript.class after compilation
 compile in Compile <<= (compile in Compile) map { any =>
-  IO.copyFile(
-    file("tv/cntt/rhinocoffeescript/CoffeeScript.class"),
-    file("target/classes/tv/cntt/rhinocoffeescript/CoffeeScript.class")
-  )
+  val src = new File("tv/cntt/rhinocoffeescript/CoffeeScript.class")
+  if (src.exists)
+    IO.copyFile(
+      file("tv/cntt/rhinocoffeescript/CoffeeScript.class"),
+      file("target/classes/tv/cntt/rhinocoffeescript/CoffeeScript.class")
+    )
   any
 }
 
