@@ -1,9 +1,9 @@
 This Java library provides CoffeeScript.class precompiled with
 `Rhino <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino>`_.
 This allows you to speed up the compiling of CoffeeScript snippets to JavaScript.
-For example, it takes several seconds to load coffee-script.js and use it to
-compile a simple CoffeeScript snippet. It is reduced to several milliseconds
-when using the precompiled CoffeeScript.class.
+For example, it usually takes several seconds to load coffee-script.js and use
+it to compile a simple CoffeeScript snippet. This can be reduced to several
+milliseconds when using the precompiled CoffeeScript.class.
 
 Usage
 -----
@@ -12,9 +12,11 @@ Maven:
 
 * Group: tv.cntt
 * Artifact: rhinocoffeescript
-* Version: 1.9.0 (= latest version of CoffeeScript)
+* Version: 1.9.0 (= version of CoffeeScript)
 
-Tell me to update if a new version of CoffeeScript has been released.
+Please `create a new issue <https://github.com/xitrum-framework/RhinoCoffeeScript/issues>`_
+to report if you see that a new version of CoffeeScript has been released, but
+there's no corresponding version of rhinocoffeescript.
 
 This library only includes Rhino dependency. You can use the precompiled class
 ``tv.cntt.rhinocoffeescript.CoffeeScript`` or the utility class
@@ -42,7 +44,7 @@ Scala example:
     }
   }
 
-You also cache the generated JavaScript snippet using local cache
+You can also cache the generated JavaScript snippet using local cache
 (you can easily `implement one with LinkedHashMap <http://www.java-blog.com/creating-simple-cache-java-linkedhashmap-anonymous-class>`_)
 or distributed cache (like `Hazelcast <http://www.hazelcast.com/>`_).
 
@@ -50,7 +52,7 @@ How CoffeeScript.class is created
 ---------------------------------
 
 1. Download coffee-script.js (the core compile) from http://coffeescript.org/
-2. Precompile with Rhino 1.7R4:
+2. Precompile with Rhino 1.7R5:
 
 ::
 
@@ -58,8 +60,9 @@ How CoffeeScript.class is created
     "-opt 9 -nosource -o CoffeeScript -package tv.cntt.rhinocoffeescript coffee-script.js".split(" ")
   )
 
-Tell me to update if a new version of Rhino has been released or the above
-options can be improved.
+Please `create a new issue <https://github.com/xitrum-framework/RhinoCoffeeScript/issues>`_
+to report if a new version of Rhino has been released or the above options can
+be improved.
 
 About the options when creating CoffeeScript.class
 --------------------------------------------------
