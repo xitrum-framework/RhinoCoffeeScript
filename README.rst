@@ -12,7 +12,7 @@ Maven:
 
 * Group: tv.cntt
 * Artifact: rhinocoffeescript
-* Version: 1.9.2 (= version of CoffeeScript)
+* Version: 1.9.3 (= version of CoffeeScript)
 
 Please `create a new issue <https://github.com/xitrum-framework/RhinoCoffeeScript/issues>`_
 to report if you see that a new version of CoffeeScript has been released, but
@@ -52,7 +52,7 @@ How CoffeeScript.class is created
 ---------------------------------
 
 1. Download coffee-script.js (the core compile) from http://coffeescript.org/
-2. Precompile with Rhino 1.7.6:
+2. Precompile with Rhino 1.7.7:
 
 ::
 
