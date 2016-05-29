@@ -4,7 +4,8 @@ Generate CoffeeScript.class
 Step 1
 ~~~~~~
 
-Download coffee-script.js (the core compile) from http://coffeescript.org/.
+Download coffee-script.js (the core compile) from http://coffeescript.org/
+and put it in the root directory of this project.
 
 Step 2
 ~~~~~~
