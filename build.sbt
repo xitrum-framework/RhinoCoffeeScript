@@ -25,9 +25,3 @@ compile in Compile <<= (compile in Compile) map { any =>
     )
   any
 }
-
-//------------------------------------------------------------------------------
-
-// Skip API doc generation to speedup "publish-local" while developing.
-// Comment out this line when publishing to Sonatype.
-publishArtifact in (Compile, packageDoc) := false
