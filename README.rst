@@ -1,4 +1,7 @@
-This Java library provides CoffeeScript.class precompiled with
+RhinoCoffeeScript
+=================
+
+This Java library provides ``CoffeeScript.class`` precompiled with
 `Rhino <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino>`_.
 This allows you to speed up the compiling of CoffeeScript snippets to JavaScript.
 For example, it usually takes several seconds to load coffee-script.js and use
@@ -10,13 +13,15 @@ Usage
 
 Maven:
 
-* Group: tv.cntt
-* Artifact: rhinocoffeescript
-* Version: 1.10.0 (= version of CoffeeScript)
+* Group: ``tv.cntt``
+* Artifact: ``rhinocoffeescript``
+* Version: ``1.12.7`` (= version of CoffeeScript)
 
-Please `create a new issue <https://github.com/xitrum-framework/RhinoCoffeeScript/issues>`_
-to report if you see that a new version of CoffeeScript has been released, but
-there's no corresponding version of rhinocoffeescript.
+If you see that a new version of CoffeeScript has been released, but there's no
+corresponding version of RhinoCoffeeScript, please report by
+`creating a new issue <https://github.com/xitrum-framework/RhinoCoffeeScript/issues>`_.
+
+Note that we have `problem with CoffeeScript 2.x <https://github.com/xitrum-framework/RhinoCoffeeScript/pull/9>`_.
 
 This library only includes Rhino dependency. You can use the precompiled class
 ``tv.cntt.rhinocoffeescript.CoffeeScript`` or the utility class
@@ -52,7 +57,7 @@ How CoffeeScript.class is created
 ---------------------------------
 
 1. Download coffee-script.js (the core compile) from http://coffeescript.org/
-2. Precompile with Rhino 1.7.7.1:
+2. Precompile with Rhino:
 
 ::
 

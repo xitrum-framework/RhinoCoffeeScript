@@ -1,6 +1,6 @@
 organization := "tv.cntt"
 name         := "rhinocoffeescript"
-version      := "1.10.0"
+version      := "1.12.7"
 
 // Remove Scala dependency
 autoScalaLibrary := false
